@@ -1,0 +1,212 @@
+# Blog Configuration Template
+# Copy this file to your project root as BLOG_CONFIG.yaml and customize
+
+# =============================================================================
+# BUSINESS INFORMATION
+# =============================================================================
+business:
+  name: "Your Business Name"
+  tagline: "Your business tagline or slogan"
+  location:
+    city: "City Name"
+    province_state: "Province/State"
+    country: "Country"
+    postal_code: "A1A 1A1"
+  industry: "Your Industry"  # e.g., "Technology", "Real Estate", "Beauty", "Healthcare"
+  description: |
+    Brief description of your business (2-3 sentences).
+    What you do and who you serve.
+
+  # Local references for SEO (neighborhoods, landmarks, etc.)
+  local_references:
+    - "Downtown"
+    - "University District"
+    - "River Valley"
+
+  # Seasonal/regional factors to mention
+  seasonal_factors:
+    - "cold winters"
+    - "hot summers"
+
+# =============================================================================
+# AUTHOR INFORMATION
+# =============================================================================
+author:
+  name: "Author Name"
+  title: "Job Title"
+  credentials: "Relevant certifications or experience"
+  bio: "Brief author bio for blog posts"
+
+# =============================================================================
+# SERVICES (in priority order)
+# =============================================================================
+# List services in order of importance for internal linking
+services:
+  - name: "Primary Service"
+    url: "/services/primary-service"
+    description: "Brief description of this service"
+    priority: 1  # 1 = highest priority, link most often
+    keywords:
+      - "primary service keyword"
+      - "main keyword variation"
+
+  - name: "Secondary Service"
+    url: "/services/secondary-service"
+    description: "Brief description"
+    priority: 2
+    keywords:
+      - "secondary service keyword"
+
+  - name: "Tertiary Service"
+    url: "/services/tertiary-service"
+    description: "Brief description"
+    priority: 3
+    keywords:
+      - "tertiary service keyword"
+
+# =============================================================================
+# CONTENT CATEGORIES & PRIORITIES
+# =============================================================================
+# What percentage of blog content should cover each category
+content_categories:
+  - name: "Main Topic Area"
+    percentage: 50
+    description: "Primary focus - drives most leads"
+
+  - name: "Secondary Topic Area"
+    percentage: 30
+    description: "Supports authority building"
+
+  - name: "Tertiary Topic Area"
+    percentage: 20
+    description: "Fills content gaps"
+
+# =============================================================================
+# TARGET KEYWORDS
+# =============================================================================
+keywords:
+  primary:
+    - "main keyword location"
+    - "primary service location"
+
+  secondary:
+    - "secondary keyword"
+    - "related keyword location"
+
+  long_tail:
+    - "long tail keyword phrase"
+    - "question-based keyword"
+
+# =============================================================================
+# INTERNAL LINKING TARGETS
+# =============================================================================
+# Pages to link to (besides services)
+pages:
+  homepage: "/"
+  contact: "/contact"
+  about: "/about"
+  pricing: "/pricing"  # optional
+  faq: "/faq"  # optional
+  blog_index: "/blog"
+
+# =============================================================================
+# ASTRO STRUCTURE
+# =============================================================================
+astro_structure:
+  # "content_collections" for markdown in /src/content/blog/
+  # "standalone" for .astro files in /src/pages/blog/
+  type: "content_collections"  # or "standalone"
+
+  # Where blog posts are stored
+  blog_directory: "src/content/blog"  # or "src/pages/blog"
+
+  # File extension
+  file_extension: ".md"  # or ".astro"
+
+  # Timezone for dates (for standalone Astro files)
+  timezone: "-06:00"  # e.g., UTC-6 for Saskatchewan/Central Time
+
+  # Layout import (for standalone files)
+  layout_import: "../../layouts/BlogLayout.astro"
+
+  # Additional imports (for standalone files)
+  additional_imports:
+    - "TableOfContents from '../../components/TableOfContents.astro'"
+
+# =============================================================================
+# FRONTMATTER SCHEMA
+# =============================================================================
+# Define the frontmatter fields for your blog posts
+frontmatter:
+  # Required fields
+  required:
+    - title
+    - description
+    - pubDate
+
+  # Optional fields with defaults
+  optional:
+    author: "Author Name"
+    draft: false
+
+  # Custom fields specific to your site
+  custom:
+    - name: "tags"
+      type: "array"
+      default: []
+    - name: "heroImage"
+      type: "string"
+      default: null
+    - name: "category"
+      type: "string"
+      default: "General"
+
+# =============================================================================
+# CONTENT SETTINGS
+# =============================================================================
+content:
+  # Target word count range
+  min_words: 1000
+  max_words: 2000
+
+  # How many times to mention location
+  location_mentions: 3-5
+
+  # Internal linking requirements
+  min_internal_links: 6
+  min_service_links: 2
+  min_blog_links: 3
+
+# =============================================================================
+# CTA SECTION TEMPLATE
+# =============================================================================
+cta_template:
+  heading: "Get Expert Help in [Location]"
+  intro: |
+    Ready for professional assistance? [Business Name] specializes in
+    helping [target audience] achieve [desired outcome].
+  benefits:
+    - "Benefit 1 - brief description"
+    - "Benefit 2 - brief description"
+    - "Benefit 3 - brief description"
+    - "Benefit 4 - brief description"
+  closing: "Contact us today for a free consultation!"
+
+# =============================================================================
+# EXISTING TOPICS (to avoid duplication)
+# =============================================================================
+# List topics already covered in your blog
+# Update this list as you create new posts
+existing_topics:
+  - "topic one"
+  - "topic two"
+  - "topic three"
+
+# =============================================================================
+# NOTES
+# =============================================================================
+# Any additional notes or guidelines specific to this website
+notes: |
+  - Always emphasize local service
+  - Mention pricing when relevant
+  - Include practical, actionable tips

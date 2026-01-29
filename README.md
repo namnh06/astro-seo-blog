@@ -19,7 +19,7 @@ Examples:
 
 1. **Install the skill** — Place this folder in `~/.claude/skills/astro-seo-blog/`
 
-2. **Add a config to your project** — Copy `blog-config-template.yaml` to your Astro project root as `BLOG_CONFIG.yaml` and fill in your business details, services, keywords, and Astro structure type.
+2. **Add a config to your project** — Copy `assets/blog-config-template.yaml` to your Astro project root as `BLOG_CONFIG.yaml` and fill in your business details, services, keywords, and Astro structure type.
 
 3. **Run it** — Open Claude Code in your Astro project and use `/astro-seo-blog [topic]`.
 
@@ -57,15 +57,16 @@ Set `astro_structure.type` in your `BLOG_CONFIG.yaml` to `content_collections` o
 
 ```
 astro-seo-blog/
-├── SKILL.md                          # Skill definition and trigger config
-├── CLAUDE.md                         # Instructions for Claude Code
-├── blog-config-template.yaml         # Template to copy into your project
-├── seo-guidelines.md                 # Full SEO rules and quality checklist
-├── templates/
-│   ├── content-collections.md        # Markdown post template
-│   └── standalone-astro.md           # .astro file template
-└── examples/
-    └── sample-post.md                # Example output
+├── SKILL.md                              # Skill definition and instructions
+├── assets/
+│   └── blog-config-template.yaml         # Template to copy into your project
+└── references/
+    ├── seo-guidelines.md                 # Full SEO rules and quality checklist
+    ├── templates/
+    │   ├── content-collections.md        # Markdown post template
+    │   └── standalone-astro.md           # .astro file template
+    └── examples/
+        └── sample-post.md               # Example output
 ```
 
 ## Configuration Reference
@@ -83,7 +84,9 @@ astro-seo-blog/
 - **cta_template** — Call-to-action section template
 - **existing_topics** — Previously covered topics to avoid duplication
 
-See `blog-config-template.yaml` for the full template with comments.
+See `assets/blog-config-template.yaml` for the full template with comments.
+
+This skill follows the [Agent Skills](https://agentskills.io) specification.
 
 ## License
 
